@@ -94,7 +94,7 @@ public class CategoryController extends HttpServlet {
     }
 
 
-    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
 
 
@@ -111,7 +111,7 @@ public class CategoryController extends HttpServlet {
 
     }
 
-    public void jump(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void jump(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         PageModel<Category> PageModel = CategoryService.findAll(1, 5);
 
@@ -132,7 +132,7 @@ public class CategoryController extends HttpServlet {
 
     }
 
-    public void updateById(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void updateById(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int id = Integer.parseInt(req.getParameter("_id"));
 

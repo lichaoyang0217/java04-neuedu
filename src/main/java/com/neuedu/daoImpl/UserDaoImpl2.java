@@ -23,7 +23,7 @@ public class UserDaoImpl2 implements UserDao {
 
             con = com.neuedu.entity.JDBC.conn();
             st = con.createStatement();
-            String sql = "select username,userpassword from account     ";
+            String sql = "select username,userpassword from accounts     ";
             re = st.executeQuery(sql);
 
             while (re.next()) {
@@ -67,7 +67,7 @@ public class UserDaoImpl2 implements UserDao {
 
             con = JDBC.conn();
 
-            String sql = "select * from account "
+            String sql = "select * from accounts "
                     + " where username=? and userpassword=? ";
             st = con.prepareStatement(sql);
             st.setString(1, name);
@@ -125,7 +125,7 @@ public class UserDaoImpl2 implements UserDao {
             String password = user.getUserpassword();
 
 
-            String sql = "insert into account(username,userpassword)  values(?,?)";
+            String sql = "insert into accounts(username,userpassword)  values(?,?)";
             st = con.prepareStatement(sql);
             //'"+name+"','"+price+"','"+image+"','"+stock+"','"+detail+"'
             st.setString(1, name);
@@ -162,7 +162,7 @@ public class UserDaoImpl2 implements UserDao {
             con = JDBC.conn();
             //��ȡstatement����ִ��sql���
             System.out.println(user);
-            String sql = "update	account set token=?  where accountid=?";
+            String sql = "update	accounts set token=?  where accountid=?";
             st = con.prepareStatement(sql);
             st.setString(1, token);
             st.setInt(2, user.getId());
@@ -198,7 +198,7 @@ public class UserDaoImpl2 implements UserDao {
         try {
 
             con = JDBC.conn();
-            String sql = "select * from account where accountid=? ";
+            String sql = "select * from accounts where accountid=? ";
             st = con.prepareStatement(sql);
             st.setInt(1, Accountid);
             re = st.executeQuery();

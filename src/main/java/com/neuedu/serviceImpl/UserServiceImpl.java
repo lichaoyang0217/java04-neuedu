@@ -2,11 +2,12 @@ package com.neuedu.serviceImpl;
 
 import com.neuedu.MyBatis.MyBatisloginImpl;
 import com.neuedu.dao.UserDao;
+import com.neuedu.daoImpl.UserDaoImpl2;
 import com.neuedu.entity.User;
 import com.neuedu.service.UserService;
 
 public class UserServiceImpl implements UserService {
-    UserDao userDaoImpl = new MyBatisloginImpl();
+    UserDao userDaoImpl = new UserDaoImpl2();
 
 
     @Override

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 
 @WebFilter("/product/*")
@@ -31,7 +32,7 @@ public class CheckLogin implements Filter {
     /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
      */
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
 
         HttpServletRequest _req = (HttpServletRequest) request;
         HttpServletResponse _resp = (HttpServletResponse) response;

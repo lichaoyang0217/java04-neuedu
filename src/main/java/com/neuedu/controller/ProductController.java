@@ -53,7 +53,7 @@ public class ProductController extends HttpServlet {
         }
     }
 
-    private void findPageNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    private void findPageNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
 
         int pageNo = Integer.parseInt(req.getParameter("pageNo"));
@@ -65,7 +65,7 @@ public class ProductController extends HttpServlet {
     }
 
     //ҳ����ת
-    public void jump(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void jump(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         PageModel<Product> PageModel = productservice.findProductByPage(1, 3);
 
@@ -133,7 +133,7 @@ req.getRequestDispatcher("showproduct.jsp").forward(req, resp);
     }
     //�޸�
 
-    public void updateById(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void updateById(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int id = Integer.parseInt(req.getParameter("_id"));
 

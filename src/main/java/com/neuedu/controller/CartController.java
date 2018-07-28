@@ -96,7 +96,7 @@ public class CartController extends HttpServlet {
         return cartservice.addCart(cart);
     }
 
-    public void findAllCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void findAllCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
 
         List<Cart> carts = cartservice.findAllCart();
@@ -122,7 +122,7 @@ public class CartController extends HttpServlet {
 
     }
 
-    public void updateCartNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void updateCartNo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int id = Integer.parseInt(req.getParameter("cid"));
 

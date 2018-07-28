@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-.head_top{
+
+.head_top {
     width: 100%;
     height: 122px;
-    background:#0a3665;
+    background: #0a3665;
     display: flex;
-    position:fixed;
+    position: fixed;
     justify-content: center;
     align-items: center;
 }

@@ -2,6 +2,8 @@ package com.neuedu.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Servlet Filter implementation class CharacterFilter
@@ -27,7 +29,7 @@ public class CharacterFilter implements Filter {
     /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
      */
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
 
         //����
         request.setCharacterEncoding("UTF-8");

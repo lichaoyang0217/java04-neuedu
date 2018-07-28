@@ -46,7 +46,7 @@ public class OrderItemController extends HttpServlet {
         doGet(req, resp);
     }
 
-    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
         System.out.println("123123123");
         List<OrderItem> orderitems = orderItemServiceImpl.seeOrderItem();

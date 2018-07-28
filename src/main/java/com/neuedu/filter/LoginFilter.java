@@ -11,6 +11,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * Servlet Filter implementation class Login
@@ -35,7 +36,7 @@ public class LoginFilter implements Filter {
     /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
      */
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         System.out.println("DAODA");
         HttpServletRequest _request = (HttpServletRequest) request;
         HttpServletResponse _response = (HttpServletResponse) response;

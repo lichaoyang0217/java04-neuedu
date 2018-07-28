@@ -68,7 +68,7 @@ public class OrderController extends HttpServlet {
         }
     }
 
-    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
+    public void findAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
         List<Order> order = orderServiceImpl.seeOrder();
         req.setAttribute("order", order);
