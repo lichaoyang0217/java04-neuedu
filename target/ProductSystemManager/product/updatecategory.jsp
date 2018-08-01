@@ -19,19 +19,19 @@
         </tr>
         <tr>
             <td><span>输入类别名称：</span></td>
-            <td><input type="text" name="name" value=${ category.name }/></td>
+            <td><input type="text" name="name" value=${ category.name }></td>
         </tr>
         <tr>
             <td><span>输入父ID：</span></td>
-            <td><input type="text" name="parent_id" value=${ category.parent_id }/></td>
+            <td><input type="text" name="parent_id" value=${ category.parent_id }></td>
         </tr>
         <tr>
             <td><span>输入类别状态：</span></td>
-            <td><input type="text" name="status" value=${ category.status }/></td>
+            <td><input type="text" name="status" value=${ category.status }></td>
         </tr>
         <tr>
             <td><span>输入类别顺序：</span></td>
-            <td><input type="text" name="sort_order" value=${ category.sort_order }/></td>
+            <td><input type="text" name="sort_order" value=${ category.sort_order }></td>
         </tr>
 
         <tr>

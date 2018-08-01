@@ -15,27 +15,27 @@
     <input type="hidden" name="operation" value="5"/>
     <table>
         <tr>
-            <td><input type="text" name="id" value=${ product.id } readonly="readonly"/></td>
+            <td><input type="text" name="id" value=${ product.productid } readonly="readonly"/></td>
         </tr>
         <tr>
             <td><span>输入商品名称：</span></td>
-            <td><input type="text" name="pname" value=${ product.name }/></td>
+            <td><input type="text" name="pname" value=${ product.pname }></td>
         </tr>
         <tr>
             <td><span>输入商品价格：</span></td>
-            <td><input type="text" name="price" value=${ product.price }/></td>
+            <td><input type="text" name="price" value=${ product.price }></td>
         </tr>
         <tr>
             <td><span>输入商品库存：</span></td>
-            <td><input type="text" name="stock" value=${ product.stock }/></td>
+            <td><input type="text" name="stock" value=${ product.stock }></td>
         </tr>
         <tr>
             <td><span>输入商品介绍：</span></td>
-            <td><input type="text" name="detail" value=${ product.detail }/></td>
+            <td><input type="text" name="detail" value=${ product.detail }></td>
         </tr>
         <tr>
             <td><span>输入商品图片：</span></td>
-            <td><input type="text" name="image" value=${ product.image }/></td>
+            <td><input type="text" name="image" value=${ product.image }></td>
         </tr>
         <tr>
             <td><input type="submit" value="修改"/></td>

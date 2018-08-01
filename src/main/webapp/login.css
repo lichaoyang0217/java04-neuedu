@@ -133,27 +133,7 @@ li {
 
 }
 
-/*登录NBA账号*/
-/*control_label{
 
-        width: 110px;
-height: 40px;
-font-size: 14px;
-line-height: 40px;
-color: #000;
-display: block;
-position: relative;
-top: 0;
-left: 0;
-text-align: right;
-font-weight: normal;
-margin: 0;
-
-}*/
-/*.NBA_number{
-    display: block;
-}
-*/
 
 .form_group {
     height: 32px;
@@ -227,32 +207,3 @@ margin: 0;
     height: 18px;
 }
 
-/*注册页面*/
-
-.zhuce_title {
-    width: 420px;
-    height: 52px;
-    padding-top: 30px;
-    padding-bottom: 24px;
-
-}
-
-.p4 {
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: bold;
-    color: #e30543;
-    margin-bottom: 10px;
-}
-
-.zhucebiaodan {
-    text-align: right;
-}
-
-.promise2 {
-    width: 500px;
-    height: 34px;
-    padding-left: 27px;
-    padding-right: 10px;
-    float: right;
-}

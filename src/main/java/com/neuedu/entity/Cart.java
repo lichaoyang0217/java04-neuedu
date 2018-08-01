@@ -25,7 +25,7 @@ public class Cart implements Serializable {
         super();
     }
 
-    public int getQuantity() {
+     public int getQuantity() {
         return quantity;
     }
 

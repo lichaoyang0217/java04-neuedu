@@ -33,7 +33,7 @@ public class CartDaoImpl2 implements CartDao {
             Long num = Cart.getCart_no();
             int pid = Cart.getProduct().getProductid();
             int quantity = Cart.getQuantity();
-            String sql2 = "insert into cart(num,product_id,quantity)  values(?,?,?)";
+            String sql2 = "insert into carts(num,product_id,quantity)  values(?,?,?)";
             st = con.prepareStatement(sql2);
             //'"+_id+"','"+num+"','"+pid+"','"+quantity+"'
             st.setLong(1, num);
@@ -68,7 +68,7 @@ public class CartDaoImpl2 implements CartDao {
 
             con = JDBC.conn();
 
-            String sql = "select * from cart";
+            String sql = "select * from carts";
             st = con.prepareStatement(sql);
             re = st.executeQuery();
 
@@ -176,7 +176,7 @@ public class CartDaoImpl2 implements CartDao {
             //��ȡstatement����ִ��sql���
 
 
-            String sql2 = "delete from cart where cartid=?";
+            String sql2 = "delete from carts where cartid=?";
 
             st = con.prepareStatement(sql2);
             st.setInt(1, id);
@@ -213,7 +213,7 @@ public class CartDaoImpl2 implements CartDao {
             //��ȡstatement����ִ��sql���
             st = con.createStatement();
 
-            String sql2 = "update  cart set quantity=" + quantity + " where cartid=" + id;
+            String sql2 = "update  carts set quantity=" + quantity + " where cartid=" + id;
             st.execute(sql2);
 
 
@@ -251,7 +251,7 @@ public class CartDaoImpl2 implements CartDao {
             //��ȡstatement����ִ��sql���
             st = con.createStatement();
 
-            String sql2 = "delete from cart ";
+            String sql2 = "delete from carts ";
             st.execute(sql2);
 
 
@@ -284,7 +284,7 @@ public class CartDaoImpl2 implements CartDao {
 
             con = JDBC.conn();
 
-            String sql = "select * from cart where cartid=?";
+            String sql = "select * from carts where cartid=?";
             st = con.prepareStatement(sql);
             st.setInt(1, id);
 
