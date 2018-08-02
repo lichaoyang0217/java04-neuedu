@@ -1,5 +1,6 @@
 package com.neuedu.controller;
 
+import com.google.gson.Gson;
 import com.neuedu.entity.Cart;
 import com.neuedu.entity.Product;
 import com.neuedu.serviceImpl.CartServiceImpl;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet("/product/cart")
@@ -54,8 +56,8 @@ public class CartController extends HttpServlet {
             updateCartNo(req, resp);
         } else if (_op.equals("5")) {
             updateCartNum(req, resp);
-        } else if (_op.equals("6")) {
-
+        } else if (_op.equals("6")){
+            findAllCart(req, resp);
         }
     }
 
@@ -96,10 +98,19 @@ public class CartController extends HttpServlet {
         return cartservice.addCart(cart);
     }
 
-    public void findAllCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void  findAllCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // TODO Auto-generated method stub
 
         List<Cart> carts = cartservice.findAllCart();
+        String  callback=req.getParameter("callback");
+
+        Gson  gson=new Gson();
+        String json=gson.toJson(carts);
+
+        PrintWriter printWriter=resp.getWriter();
+        printWriter.write(callback+"("+json+")");
+
+
         req.setAttribute("carts", carts);
         req.getRequestDispatcher("showcart.jsp").forward(req, resp);
         System.out.println(carts);

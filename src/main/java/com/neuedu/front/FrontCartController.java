@@ -36,16 +36,18 @@ public class FrontCartController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
 
+        CartService cartservice = new CartServiceImpl();
+        List<Cart> carts = cartservice.findAllCart();
+        String  callback=request.getParameter("callback");
 
-        String method = request.getParameter("method");
+        Gson  gson=new Gson();
+        String json=gson.toJson(carts);
+
+        PrintWriter printWriter=response.getWriter();
+        printWriter.write(callback+"("+json+")");
 
 
-        CartService carts = new CartServiceImpl();
-        List<Cart> list = carts.findAllCart();
-        Gson gson = new Gson();
-        String json = gson.toJson(list);
-        PrintWriter write = response.getWriter();
-        write.println(method + "(" + json + ")");
+
 
     }
 
